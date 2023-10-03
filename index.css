@@ -1,0 +1,559 @@
+/* -- Começo do header -- */
+
+.cabecalho-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0.3em 0.3em 0.3em #a1a1a1;
+    z-index: 1000;
+}
+
+.header_nav{
+    margin: 1em 1em 0 0;
+    text-align: right;
+    display: flex;
+    gap: 0.6em;
+    background-color: white;
+}
+
+.header_nav ul li{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75em;
+}
+
+.header_nav a{
+    display: block;
+    color: #747892;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.6em;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.header_nav a:hover{
+    color: #000000;
+    transition: all 0.9s ease;
+    transform: scale(1.1);
+}
+
+.header_logo{
+    width: 15.9em;
+}
+
+.header_logo:hover{
+    cursor: pointer;
+}
+
+#hamburguer{
+    display: none;
+}
+
+.div-cabecalho{
+    background-image: url(outras-img/cabecalho.png);
+    height: 30em;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0.3em auto 1.5em auto;
+    text-align: center;
+    color: #000000;
+}
+
+.div-cabecalho h1{
+    color: #ffffff;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 0.1em 0.1em #00000080;
+    font-family: 'Amatic SC', cursive;
+}
+
+.div-cabecalho a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1.9em;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0.1em 0.1em #00000080;
+}
+
+.div-cabecalho a:hover{
+    color: #e4c5fb;
+    transition: all 0.5s ease;
+}
+
+.div-cabecalho p{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+}
+
+@media screen and (max-width: 61em){
+    .cabecalho-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-cabecalho h1{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .div-cabecalho p{
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .header_nav{
+        background-color: white;
+        color: white;
+        display: none;
+        text-align: center;
+    }
+
+    .header_nav.show{
+        display: block;
+    }
+
+    .div-cabecalho{
+        background-image: url(outras-img/cabecalho.png);
+        background-size: cover;
+        padding-top: 0.06em;
+        background-attachment: fixed;
+        height: auto;
+        margin-top: 7em;
+    }
+
+    #hamburguer{
+        background-color: #ffffff;
+        color: #0D0D0D;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        padding: 0.3em;
+        cursor: pointer;
+        font-size: 2em;
+    }
+}
+
+
+/* -- CSS da animação header 
+   Crédito: Mohammad Abdul  -- */
+
+.area{ 
+    width: auto;
+    height: 0vh;
+}
+
+.circles{
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 1.2em;
+    height: 1.2em;
+    background: #ffffff33;
+    animation: animate 25s linear infinite;
+    bottom: -9.3em;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 5em;
+    height: 5em;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 1.2em;
+    height: 1.2em;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 1.2em;
+    height: 1.2em;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 3.7em;
+    height: 3.7em;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 1.2em;
+    height: 1.2em;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 6.8em;
+    height: 6.8em;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 9.3em;
+    height: 9.3em;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 0.9em;
+    height: 0.9em;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 9.3em;
+    height: 9.3em;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .area{
+        display: none;
+    }
+
+    .circles{
+        display: none;
+    }
+}
+
+/* ----------- */
+
+
+/* -- Definições iníciais da main/body -- */
+
+html {
+    scroll-behavior: smooth;
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main h2{
+    text-align: center;
+    font-size: 1.9em;
+    padding-bottom: 0.5em;
+    color: #747892;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0.1em 0.1em #c5c5c580;
+}
+
+main p{
+    text-align: center;
+    font-size: 1.09em;;
+}
+
+.div-paragrafo{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.2em;
+    background-color: #f3e9e3;
+    padding: 2em;
+    border-radius: 10.5px;
+    box-shadow: 0.6em 0.3em 0.3em #a1a1a1;
+}
+
+.container{
+    padding-top: 1em;
+}
+
+.edit-aprendizados{
+    font-size: 1em;
+}
+
+.div-img{
+    display: flex;
+    justify-content: center;
+    height: 5.1em;
+    max-width: 0.1em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.div-img:hover{
+    transition: all 0.7s ease;
+    transform: scale(1.1);
+}
+
+.video-depoimento{
+    display: flex;
+    justify-content: center;
+}
+
+.botao-depoimento{
+    display: none;
+}
+
+
+@media screen and (max-width: 61em){
+    .video-depoimento{
+        display: none;
+    }
+
+    .botao-depoimento{
+        width: 9em;
+        display: flex;
+        padding: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-color: #e9dcd4;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #6e6d6d;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+/* ------------- */
+
+
+
+/* -- Section: projetos 
+desenvolvidos em aula -- */
+
+.main-projetos{
+    background-color: #efeff1;
+    text-align: center;
+    padding-top: 1.6em;
+}
+
+.titulo-projetos{
+    color: #6e6d6d;
+    background-color: #e9dcd4;
+    box-shadow: 0.6em 0.3em 0.3em #a1a1a1;
+    padding: 0.5em;
+    font-size: 1.6em;
+    margin-left: 4.5em;
+    margin-right: 4.5em;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.container-projetos{
+    margin-left: 5.5em;
+    margin-right: 5.5em;
+    columns: 2;
+    column-gap: 7em;
+}
+
+.container-projetos p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+}
+
+.projetos-dois{
+    padding: 1em;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+}
+
+.botao-edit{
+    display: inline-block;
+    margin: 0.3em;
+    margin-bottom: 5em;
+    padding: 1em;
+    font-size: 0.8em;
+    background-color: #747892;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffffff;
+    text-transform: uppercase;
+}
+
+.botao-edit:hover{
+    background-color: color-mix(in srgb, #747892,#ffffffff 20%);
+}
+
+.desafio-img{
+    width: 15em;
+}
+
+.desafio-img:hover{
+    transition: all 0.9s ease;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 61em){
+    .main_content{
+        background-color: #e8e3fc;
+        text-align: center;
+        width: auto;
+        padding: 0;
+    }
+
+    .container-projetos{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+        margin-top: 0;
+    }
+
+    .titulo-projetos{
+        font-size: auto;
+    }
+
+    .container-projetos p{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.3em;
+    }
+
+    .projetos-dois{
+        padding: 2em;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    .tituloprincipal-projetos{
+        padding-bottom: 0;
+    }
+
+    .titulo-projetos{
+       margin-top: 2em;
+       padding-left: 1em;
+       padding-right: 1em;
+       font-size: 1.6em;
+
+    }
+    
+    .botao-edit{
+        width: 8em;
+        margin-bottom: 1em;
+    }
+}
+
+/* ------------- */
+
+
+/* -- Início do footer -- */
+
+footer{
+    background-color: #1a1919;
+    color: #9a9999;
+    padding: 2em;
+    margin-top: 3.1em;
+    font-size: 0.9em;
+    text-align: center;
+    text-transform: uppercase;
+    height: auto;
+}
+
+.textocentral-footer{
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.8em;
+}
+
+.iconsfooter-tamanho{
+    width: 3.2em;
+    margin-top: 2em;
+    padding: 0.7em;
+}
+
+.iconsfooter-tamanho:hover{
+    cursor: pointer;
+    transition: all 0.9s ease;
+    transform: scale(1.1);
+}
+
+.creditos-footer{
+    font-size: 0.7em;
+    margin-top: 5em;
+}
+
+@media screen and (max-width: 61em){
+    .icons-footer{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .iconsfooter-tamanho{
+        width: 3em;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    /* ------------- */
+
+}
